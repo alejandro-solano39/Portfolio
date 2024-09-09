@@ -7,19 +7,23 @@ import CVIcon from "../components/icons/CV.astro";
 import LinkedinIcon from "../components/icons/Linkedin.astro";
 import SocialPill from "../components/SocialPill.astro";
 import MailIcon from "../components/icons/Mail.astro"
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout title="Porfolio de Cesar Alejandro - Ingniero de Software y Programador Web"
 description="Contrata un ingeniero de software con conocimiento en el desarrollo web">
 
-  <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-20">
+      
       <img
         class="rounded-full size-36 mb-5"
         src="https://media.licdn.com/dms/image/v2/D4E35AQFSiO2bQdYQeA/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1724959908008?e=1725998400&v=beta&t=XD_lzDGvcOkqOpX29C0CtmA8cqvlYBR2Xid0MHPtVBg"
         alt="Alejandro photo"
       />
-      <h1 class="text-black text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1 class="text-black text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Hey, soy Cesar Alejandro Solano Enciso
         <a
           href="https://www.linkedin.com/in/c%C3%A9sar-alejandro-solano-enciso-7912922b7/"
@@ -31,29 +35,36 @@ description="Contrata un ingeniero de software con conocimiento en el desarrollo
         >
       </h1>
 
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
         <span class="text-blue-900">Ingeniero de Sofware.</span>Especalizado en
         el desarrollo Web.
       </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill>
-          <LinkedinIcon class="size-6" />
+          <LinkedinIcon class="size-4 md:size-6" />
           Linkedin
         </SocialPill>
         <SocialPill>
-          <GithubIcon class="size-6" />
+          <GithubIcon class="size-4 md:size-6" />
           Github
         </SocialPill>
         <SocialPill>
-          <CVIcon class="size-6" />
+          <CVIcon class="size-4 md:size-6" />
           CV
         </SocialPill>
         <SocialPill>
-          <MailIcon class="size-6" />
+          <MailIcon class="size-4 md:size-6" />
           csolano3019@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8"/>
+        Experiencia laboral
+      </h2>
+      <Experience/>
+    </SectionContainer>
   </main></Layout
 >
